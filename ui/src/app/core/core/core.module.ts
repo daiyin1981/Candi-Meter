@@ -4,9 +4,8 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [ CommonModule ],
+  providers: [],
 })
 export class CoreModule {
 
@@ -17,10 +16,4 @@ export class CoreModule {
     }
   }
 
-  static forRoot(): ModuleWithProviders<CoreModule> {
-    return {
-      ngModule: CoreModule,
-      providers: []
-    };
-  }
  }
