@@ -41,11 +41,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,
