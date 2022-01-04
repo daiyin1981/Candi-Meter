@@ -9,6 +9,9 @@ import {MaterialComponentsModule} from 'src/shared/material-components-module/ma
   imports: [
     CommonModule,
     MaterialComponentsModule
+  ],
+  exports:[
+    MaterialComponentsModule
   ]
 })
 export class SharedModule { }

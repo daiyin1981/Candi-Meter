@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div fxLayoutAlign="center center" style="margin-top: 3%;">
+  <div fxFlex="95" fxFlex.lt-md="100" fxFlexFill fxLayout="row" style="border: 1px solid rgb(221, 219, 219);  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div fxLayout="row wrap">
+      <div fxFlex="50" fxFlex.lt-md="100" fxLayout="column">
+        <div fxLayout="column" fxLayoutAlign="center">
+          <img style="max-width: 100%; height: auto;" src="../../../assets/login.jpg" />
+        </div>
+      </div>
+
+      <div fxFlex="50" fxFlex.lt-md="100" fxLayout="column" class="mat-app-background">
+        <div fxLayout="column" fxLayoutAlign="center" style="margin-top:25px">
+          <div fxLayout="row" fxLayoutAlign="center">
+            <h1 style="text-align: center;">Welcome To Candi Meter</h1>
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center" style="margin-top:20px">
+          <form >
+            <div fxLayoutAlign="center">
+              <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput>
+              </mat-form-field>
+            </div>
+            <div fxLayoutAlign="center">
+              <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput>
+              </mat-form-field>
+            </div>
+            <div fxLayoutAlign="center" style="margin-top:20px">
+              <div fxLayout="column">
+                <button type="submit" mat-raised-button color="primary" style="padding:15; border-radius: 15px;">Login</button>
+                <p style="margin-top: 15px; font-size: small;" fxLayoutAlign="center">Don't have an account? &nbsp;<a href="#">Create Account</a></p>
+              </div>
+            </div>
+          </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
