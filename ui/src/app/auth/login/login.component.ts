@@ -21,10 +21,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-      if (this.loginForm.valid) {
-        this.formSubmitted = true;
-      }
-      else {
+    this.formSubmitted = true;
+      if (!this.loginForm.valid) {
         this.formSubmitted = false;
       }
   }
