@@ -14,7 +14,7 @@
           </div>
         </div>
         <div fxLayout="column" fxLayoutAlign="center">
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Email</mat-label>

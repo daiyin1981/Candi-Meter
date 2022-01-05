@@ -20,14 +20,12 @@ export class LoginComponent implements OnInit {
   });
   }
 
-  onSubmit(Form:any) {
-      this.formSubmitted = true;
+  onSubmit() {
       if (this.loginForm.valid) {
-          console.log("success login")
-        }
+        this.formSubmitted = true;
+      }
       else {
-          console.log("The form is NOT valid!");
-          this.formSubmitted = false;
+        this.formSubmitted = false;
       }
   }
 
