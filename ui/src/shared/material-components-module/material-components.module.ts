@@ -85,6 +85,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatTableModule
   ],
   exports: [
+    FlexLayoutModule,
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,

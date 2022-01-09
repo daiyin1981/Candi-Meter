@@ -1,1 +1,43 @@
-<p>login works!</p>
+<div fxLayoutAlign="center center" class="loginPage">
+  <div fxFlex="95" fxFlex.lt-md="100" fxFlexFill fxLayout="row" class="contentLoginPage">
+    <div fxLayout="row wrap">
+      <div fxFlex="50" fxFlex.lt-md="100" fxLayout="column">
+        <div fxLayout="column" fxLayoutAlign="center">
+          <img class="responsiveImg" src="../../../assets/login.jpg" />
+        </div>
+      </div>
+
+      <div fxFlex="50" fxFlex.lt-md="100" fxLayout="column" class="mat-app-background">
+        <div fxLayout="column" fxLayoutAlign="center">
+          <div fxLayout="row" fxLayoutAlign="center">
+            <h1 class="titleLogin">Welcome To Candi Meter</h1>
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div fxLayoutAlign="center">
+              <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" type="email" matInput  [class.is-invalid]="loginForm.controls['email'].invalid && loginForm.controls['email'].touched" [class.is-valid]="loginForm.controls['email'].valid" required>
+                <mat-error *ngIf="loginForm.controls['email'].invalid">Please enter a valid email</mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayoutAlign="center">
+              <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input formControlName="password" type="password" matInput [class.is-invalid]="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" [class.is-valid]="loginForm.controls['password'].valid" required>
+                <mat-error *ngIf="loginForm.controls['password'].invalid">Password is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div fxLayoutAlign="center">
+              <div fxLayout="column">
+                <button type="submit" mat-raised-button [disabled]="!loginForm.valid || formSubmitted" type="submit" color="primary" class="btnLogin">Login</button>
+                <p class="createAccount" fxLayoutAlign="center">Don't have an account? &nbsp;<a href="#">Create Account</a></p>
+              </div>
+            </div>
+          </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
