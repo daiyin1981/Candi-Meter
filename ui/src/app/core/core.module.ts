@@ -19,7 +19,7 @@ import { SideBarListComponent } from './components/side-bar-list/side-bar-list.c
     SharedModule,
     RouterModule
  ],
-  providers: [],
+  providers: []
 })
 export class CoreModule {
 
