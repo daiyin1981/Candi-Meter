@@ -10,7 +10,7 @@ import { routerTransition } from '../router.animation';
   styleUrls: ['./login.component.sass']
 })
 export class LoginComponent implements OnInit {
-
+  hidePassword = true;
   loginForm : FormGroup ;
   formSubmitted : boolean = false;
 

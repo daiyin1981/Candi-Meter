@@ -16,7 +16,8 @@ export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
   formSubmitted: boolean = false;
-  hide = true;
+  hidePassword = true;
+  hideConfirmPassword = true;
   registerScreenAnimation: string = 'unchecked';
 
   constructor(private fb: FormBuilder ,private route:Router) { }

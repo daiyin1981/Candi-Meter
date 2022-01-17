@@ -32,8 +32,8 @@
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Password</mat-label>
-                <input formControlName="password" [type]="hide ? 'password' : 'text'" matInput required>
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <input formControlName="password" [type]="hidePassword ? 'password' : 'text'" matInput required>
+                <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
                 <mat-hint *ngIf="!registerForm.controls['password'].value">
                   * Minimum eight characters <br>
                   * Minimum one uppercase letter<br>
@@ -51,10 +51,10 @@
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Confirm Password</mat-label>
-                <input formControlName="confirmPassword" type="password" matInput [type]="hide ? 'password' : 'text'"
+                <input formControlName="confirmPassword"  matInput [type]="hideConfirmPassword ? 'password' : 'text'"
                   required>
 
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
                 <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('required')">confirm password is
                   required
                 </mat-error>
