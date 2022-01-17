@@ -13,14 +13,12 @@
             <h1 class="titleLogin">Welcome To Candi Meter</h1>
           </div>
         </div>
-        <div fxLayout="column" fxLayoutAlign="center" >
+        <div fxLayout="column" fxLayoutAlign="center">
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Email</mat-label>
-                <input formControlName="email" type="email" matInput
-                  [class.is-invalid]="loginForm.controls['email'].invalid && loginForm.controls['email'].touched"
-                  [class.is-valid]="loginForm.controls['email'].valid" required>
+                <input formControlName="email" type="email" matInput required>
                 <mat-error *ngIf="loginForm.controls['email'].hasError('required')">email is required
                 </mat-error>
                 <mat-error
@@ -32,9 +30,7 @@
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Password</mat-label>
-                <input formControlName="password" type="password" matInput
-                  [class.is-invalid]="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
-                  [class.is-valid]="loginForm.controls['password'].valid" required>
+                <input formControlName="password" type="password" matInput required>
                 <mat-error *ngIf="loginForm.controls['password'].invalid">Password is required</mat-error>
               </mat-form-field>
             </div>
