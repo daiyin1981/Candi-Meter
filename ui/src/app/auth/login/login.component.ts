@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { routerTransition } from '../router.animation';
 
 @Component({
   selector: 'app-login',
+  animations: [routerTransition()],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.sass']
 })
@@ -11,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm : FormGroup ;
   formSubmitted : boolean = false;
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private route:Router) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -22,7 +25,11 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.formSubmitted = true;
-      if (!this.loginForm.valid) {
+    
+    if (this.loginForm.valid) {
+    this.route.navigate(["/login"]);
+    }
+      else {
         this.formSubmitted = false;
       }
   }
