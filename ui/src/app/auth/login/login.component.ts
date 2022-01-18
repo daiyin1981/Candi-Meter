@@ -11,10 +11,10 @@ import { routerTransition } from '../router.animation';
 })
 export class LoginComponent implements OnInit {
   hidePassword = true;
-  loginForm : FormGroup ;
+  loginForm : FormGroup;
   formSubmitted : boolean = false;
 
-  constructor(private fb:FormBuilder,private route:Router) { }
+  constructor(private fb:FormBuilder, private route:Router) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({

@@ -20,7 +20,7 @@
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Email</mat-label>
-                <input formControlName="email" type="email" matInput autofocus required>
+                <input formControlName="email" type="email" matInput autofocus>
                 <mat-error *ngIf="registerForm.controls['email'].hasError('required')">email is required
                 </mat-error>
                 <mat-error
@@ -32,8 +32,9 @@
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Password</mat-label>
-                <input formControlName="password" [type]="hidePassword ? 'password' : 'text'" matInput required>
-                <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <input formControlName="password" [type]="hidePassword ? 'password' : 'text'" matInput>
+                <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' :
+                  'visibility'}}</mat-icon>
                 <mat-hint *ngIf="!registerForm.controls['password'].value">
                   * Minimum eight characters <br>
                   * Minimum one uppercase letter<br>
@@ -51,10 +52,10 @@
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Confirm Password</mat-label>
-                <input formControlName="confirmPassword"  matInput [type]="hideConfirmPassword ? 'password' : 'text'"
-                  required>
+                <input formControlName="confirmPassword" matInput [type]="hideConfirmPassword ? 'password' : 'text'">
 
-                <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">{{hideConfirmPassword ?
+                  'visibility_off' : 'visibility'}}</mat-icon>
                 <mat-error *ngIf="registerForm.controls['confirmPassword'].hasError('required')">confirm password is
                   required
                 </mat-error>

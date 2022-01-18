@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   hideConfirmPassword = true;
   registerScreenAnimation: string = 'unchecked';
 
-  constructor(private fb: FormBuilder ,private route:Router) { }
+  constructor(private fb: FormBuilder, private route:Router) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({

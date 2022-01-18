@@ -18,7 +18,7 @@
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Email</mat-label>
-                <input formControlName="email" type="email" matInput required>
+                <input formControlName="email" type="email" matInput>
                 <mat-error *ngIf="loginForm.controls['email'].hasError('required')">email is required
                 </mat-error>
                 <mat-error
@@ -30,7 +30,7 @@
             <div fxLayoutAlign="center">
               <mat-form-field fxFlex="60" fxFlex.lt-md="90" appearance="outline">
                 <mat-label>Password</mat-label>
-                <input formControlName="password" [type]="hidePassword ? 'password' : 'text'" matInput required>
+                <input formControlName="password" [type]="hidePassword ? 'password' : 'text'" matInput>
                 <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' :
                   'visibility'}}</mat-icon>
                 <mat-error *ngIf="loginForm.controls['password'].invalid">Password is required</mat-error>
