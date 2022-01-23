@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     this.formSubmitted = true;
     
     if (this.loginForm.valid) {
-    this.route.navigate(["/login"]);
+    this.route.navigateByUrl("/login");
     }
       else {
         this.formSubmitted = false;
